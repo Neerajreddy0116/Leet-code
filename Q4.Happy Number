@@ -1,0 +1,12 @@
+class Solution():
+    def isHappy(self,x:int):
+        seen=set()
+        while x!=1:
+            summ=0
+            for i in str(x):
+                summ+=int(i)**2
+            x=summ
+            if x in seen:
+                return False
+            seen.add(x)
+        return True
