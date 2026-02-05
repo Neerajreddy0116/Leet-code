@@ -1,0 +1,9 @@
+class Solution:
+    def constructTransformedArray(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        transform=[0]*n
+        for i in range(n):
+            new=0
+            new=(i+nums[i])%n
+            transform[i]=nums[new]
+        return transform
